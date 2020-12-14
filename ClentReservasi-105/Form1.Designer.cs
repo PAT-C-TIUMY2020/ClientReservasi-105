@@ -44,17 +44,21 @@
             this.btHapus = new System.Windows.Forms.Button();
             this.btClear = new System.Windows.Forms.Button();
             this.dtPemesanan = new System.Windows.Forms.DataGridView();
-            this.wCFReservasi1DataSet = new ClentReservasi_105.WCFReservasi1DataSet();
-            this.pemesananBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pemesananTableAdapter = new ClentReservasi_105.WCFReservasi1DataSetTableAdapters.PemesananTableAdapter();
             this.iDreservasiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.namacustomerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.noteleponDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.jumlahpemesananDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iDlokasiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pemesananBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.wCFReservasi1DataSet = new ClentReservasi_105.WCFReservasi1DataSet();
+            this.pemesananTableAdapter = new ClentReservasi_105.WCFReservasi1DataSetTableAdapters.PemesananTableAdapter();
+            this.performanceCounter1 = new System.Diagnostics.PerformanceCounter();
+            this.performanceCounter2 = new System.Diagnostics.PerformanceCounter();
             ((System.ComponentModel.ISupportInitialize)(this.dtPemesanan)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wCFReservasi1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pemesananBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wCFReservasi1DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.performanceCounter2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -195,20 +199,6 @@
             this.dtPemesanan.TabIndex = 14;
             this.dtPemesanan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtPemesanan_CellClick);
             // 
-            // wCFReservasi1DataSet
-            // 
-            this.wCFReservasi1DataSet.DataSetName = "WCFReservasi1DataSet";
-            this.wCFReservasi1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // pemesananBindingSource
-            // 
-            this.pemesananBindingSource.DataMember = "Pemesanan";
-            this.pemesananBindingSource.DataSource = this.wCFReservasi1DataSet;
-            // 
-            // pemesananTableAdapter
-            // 
-            this.pemesananTableAdapter.ClearBeforeFill = true;
-            // 
             // iDreservasiDataGridViewTextBoxColumn
             // 
             this.iDreservasiDataGridViewTextBoxColumn.DataPropertyName = "ID_reservasi";
@@ -239,6 +229,20 @@
             this.iDlokasiDataGridViewTextBoxColumn.HeaderText = "ID_lokasi";
             this.iDlokasiDataGridViewTextBoxColumn.Name = "iDlokasiDataGridViewTextBoxColumn";
             // 
+            // pemesananBindingSource
+            // 
+            this.pemesananBindingSource.DataMember = "Pemesanan";
+            this.pemesananBindingSource.DataSource = this.wCFReservasi1DataSet;
+            // 
+            // wCFReservasi1DataSet
+            // 
+            this.wCFReservasi1DataSet.DataSetName = "WCFReservasi1DataSet";
+            this.wCFReservasi1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // pemesananTableAdapter
+            // 
+            this.pemesananTableAdapter.ClearBeforeFill = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -263,8 +267,10 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtPemesanan)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wCFReservasi1DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pemesananBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wCFReservasi1DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.performanceCounter1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.performanceCounter2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -295,6 +301,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn noteleponDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn jumlahpemesananDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDlokasiDataGridViewTextBoxColumn;
+        private System.Diagnostics.PerformanceCounter performanceCounter1;
+        private System.Diagnostics.PerformanceCounter performanceCounter2;
     }
 }
 
